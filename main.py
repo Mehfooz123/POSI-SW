@@ -117,7 +117,7 @@ while(running):
             data.Menu = False
             YTServiceStartedNow = True
         elif(SelectedService.lower().replace(" ", "") in ["settings", "8"]):
-            print("Coming soon! This will be existed in next update!")
+            print("Coming soon! This will be made in next update!")
             print("")
         #Repair will be made by alex probably.
         #elif(SelectedService.lower() == "repair" or SelectedService.replace(" ", "") == "9"):
@@ -154,7 +154,7 @@ while(running):
             StatusCodeOfGitHubReq = RepositoryRequest.status_code
             if(StatusCodeOfGitHubReq == 200):
                 print("Successfully found package!")
-                print("Status: GOOD!   Downloadable: yes")
+                print("Status: GOOD!   Downloadable: YES!")
                 print("")
 
                 EnableCommandFeature = True

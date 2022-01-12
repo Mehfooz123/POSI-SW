@@ -1,0 +1,2 @@
+Tos = True
+Privacy = True

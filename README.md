@@ -8,4 +8,3 @@ More features will be added soon when we aren't lazy.
 |Software| Version |
 |--|--|
 | Python | 3.9.0 |
-

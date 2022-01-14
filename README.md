@@ -12,7 +12,10 @@ You can run it by 2 ways:
 **Second way (Early-Access)**: By downloading source code and it python packages. After run or debug program!
 
 ### Requirements
+
+source file requirements:
+
 |Software| Version |
 |--|--|
-| Python | 3.9.0 |
+| Python | 3.10.1 |
 

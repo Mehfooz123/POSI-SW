@@ -8,7 +8,7 @@ More features will be added soon when we aren't lazy.
 
 You can run it by 2 ways:
 
-**First way**: By downloading
+**First way**: By downloading the program release and directly run executable file `.exe` and done! You don't need to download or install anything left.
 
 ### Requirements
 |Software| Version |

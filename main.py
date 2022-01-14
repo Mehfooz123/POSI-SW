@@ -7,6 +7,7 @@ import version
 import data 
 import ToS 
 import messages
+import credit
 
 CWD = os.getcwd()
 
@@ -41,18 +42,18 @@ try:
             print("We recommended you to update because we may fixed some of bugs and added new features that you will like! Updating is kinda important for some of outdated versions")
             print("")
 except:
-    print(f"Failed to connect to {version.name} services. Make sure you are connected with internet to make some features work!")
+    print(f"Failed to connect {version.name} services. Make sure you are connected with internet to make some features works!")
     print("")
 
 while(running):
     while(ToS.Tos == False or ToS.Privacy == False):
         print("\n")
-        print("Before you start using our software. Please answer the next questions!")
+        print("Before you start using our software. Please answer next questions!")
         print("To answer questions input: YES, NO, Y, N, T, F, TRUE or FALSE (Not case-sensitive)")
         print("")
         print("")
         if(ToS.Tos == False):
-            AcceptTos = input(f"Do you agree to {version.fullname} ({version.name}) Terms of Service?\n")
+            AcceptTos = input(f"Do you agree {version.fullname} ({version.name}) Terms of Service?\n")
             if(AcceptTos.upper() == "YES" or AcceptTos.upper() == "Y" or AcceptTos.upper() == "T" or AcceptTos.upper() == "TRUE"):
                 try:
                     ToS.Tos = True
@@ -62,19 +63,19 @@ while(running):
                     if(ToS.Privacy == True):PrivacyBooleanForfile = True
                     TosFileData.write(f"Privacy = {PrivacyBooleanForfile}")
                     TosFileData.close()
-                    print("Successfully agreed to the Terms of Service!")
+                    print("Successfully agreed Terms of Service!")
                 except ValueError:
                     print("Value error")
             elif(AcceptTos.upper() == "NO" or AcceptTos.upper() == "N" or AcceptTos.upper() == "F" or AcceptTos.upper() == "FALSE"):
                 print("Successfully refused Terms of Service!")
-                print("Due to you denying the TOS of this application, the application will be closed. Open the program again to redo the questions.")
+                print("Due you denied it you are not able to use this software! Restart this application to agree or refuse again!")
                 Leave = input("Press any key to continue....")
                 exit("*")
             else:
                 print("Incorrect response. Answer with: YES, Y, T, TRUE or NO, N, F, FALSE")
 
         if(ToS.Privacy == False):
-            AcceptPrivacy = input(f"Do you agree to {version.fullname} ({version.name}) Privacy Policy?\n")
+            AcceptPrivacy = input(f"Do you agree {version.fullname} ({version.name}) Privacy Policy?\n")
             if(AcceptPrivacy.upper() == "YES" or AcceptPrivacy.upper() == "Y" or AcceptPrivacy.upper() == "T" or AcceptPrivacy.upper() == "TRUE"):
                 try:
                     ToS.Privacy = True
@@ -83,12 +84,12 @@ while(running):
                     if(ToS.Privacy == True):TermsBooleanForfile = True
                     TosFileData.write(f"Tos = {TermsBooleanForfile}\nPrivacy = True")
                     TosFileData.close()
-                    print("Successfully agreed to the Privacy Policy!")
+                    print("Successfully agreed Privacy Policy!")
                 except ValueError:
                     print("Value error")
             elif(AcceptPrivacy.upper() == "NO" or AcceptPrivacy.upper() == "N" or AcceptPrivacy.upper() == "F" or AcceptPrivacy.upper() == "FALSE"):
-                print("Successfully refused the Privacy Policy!")
-                print("Due to you denying the Privacy Policy of this application, the application will be closed. Open the program again to redo the questions.")
+                print("Successfully refused Privacy Policy!")
+                print("Due you denied it you are not able to use this software! Restart this application to agree or refuse again!")
                 Leave = input("Press any key to continue....")
                 exit("*")
             else:
@@ -98,8 +99,8 @@ while(running):
         print("")
         print(f"Welcome to {version.name} ({version.version}).")
         print(f"What service do you want to use?")
-        numbers = [1, 2, 3, 8, 0]
-        Services = ["GitHub", "Minecraft", "YouTube", "Settings", "Exit"]
+        numbers = [1, 2, 3, 8, 11,0]
+        Services = ["GitHub", "Minecraft", "YouTube", "Settings", "Credit", "Exit"]
         for number, service in zip(numbers, Services):
             print(f"[{number}] {service}")
         print("")
@@ -117,11 +118,12 @@ while(running):
             data.Menu = False
             YTServiceStartedNow = True
         elif(SelectedService.lower().replace(" ", "") in ["settings", "8"]):
-            print("Coming soon! This will be made in next update!")
+            print("Coming soon! This will be existed in next update!")
             print("")
-        #Repair will be made by alex probably.
         #elif(SelectedService.lower() == "repair" or SelectedService.replace(" ", "") == "9"):
         #    import repair
+        elif(SelectedService.lower().replace(" ", "") in ["credit", "credits", "11"]):
+            credit.credit()
         elif(SelectedService.lower() == "exit" or SelectedService.replace(" ", "") == "0"):
             running = False
             print("Closing software....")
@@ -154,7 +156,7 @@ while(running):
             StatusCodeOfGitHubReq = RepositoryRequest.status_code
             if(StatusCodeOfGitHubReq == 200):
                 print("Successfully found package!")
-                print("Status: GOOD!   Downloadable: YES!")
+                print("Status: GOOD!   Downloadable: yes")
                 print("")
 
                 EnableCommandFeature = True

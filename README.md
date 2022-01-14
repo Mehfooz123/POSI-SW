@@ -13,9 +13,19 @@ You can run it by 2 ways:
 
 ### Requirements
 
-source file requirements:
+#### Executable file requirements
+
+|      | Minimum requirements | Recommended requirements |
+| ---- | -------------------- | ------------------------ |
+| RAM  | 25 MB                | +300 MB                  |
+| ROM  | 20 MB                | +200 MB                  |
+| OS   | Win 7, 8.1, 10, 11   | Win 10                   |
+
+
+
+#### Source code requirements
 
 |Software| Version |
 |--|--|
-| Python | 3.10.1 |
+| Python | 3.9.0 |
 

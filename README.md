@@ -17,7 +17,7 @@ You can run it by 2 ways:
 
 |      | Minimum requirements | Recommended requirements |
 | ---- | -------------------- | ------------------------ |
-| RAM  | 25 MB                | +300 MB                  |
+| RAM  | 40 MB                | +300 MB                  |
 | ROM  | 20 MB                | +200 MB                  |
 | OS   | Win 7, 8.1, 10, 11   | Win 10                   |
 
